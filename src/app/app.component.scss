@@ -1,0 +1,60 @@
+
+
+.orthodox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__image{
+    flex: 1;
+    width: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text{
+    flex: 2;
+    background: #fff8ec; /* Светло кафяв цвят като основа */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Лека сянка за дълбочина */
+    font-family: 'Georgia', serif; /* Използване на старинен шрифт за по-автентичен вид */
+    position: relative;
+
+    textarea{
+      font-size: 1.2rem;
+      border: none;;
+    }
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6); /* Прозрачен бял слой за малко избледняване */
+    pointer-events: none; /* За да не пречи на взаимодействията с други елементи */
+  }
+
+  &__buttons{
+  flex: 1;
+  }
+}
+
+
+
+  .orthodox-buttons{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap:1rem;
+    margin-bottom: 1rem;
+
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // gap: 1rem;
+    // margin-top: 1rem;
+  }

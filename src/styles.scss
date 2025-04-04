@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url("./assets/images/old-paper-texture.jpg"); /* Път към твоята снимка */
+  background-size: cover; /* Фонът ще покрива цялото тяло */
+  background-repeat: repeat; /* Забранява повторението на снимката */
+  background-position: center; /* Центрира изображението */
+  height: 100vh; /* Височината на body */
+
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+p {
+  width: 15rem;
+}
+
+//Center Element
+.centered-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//Message
+.copy-message {
+  position: fixed;
+  top: -60px; /* Стартова позиция извън екрана */
+  left: 50%;
+  width: 10rem;
+  transform: translateX(-50%); /* Центриране по хоризонтала */
+  background-color: #28a745; /* Зелен цвят с малко по-мек нюанс */
+  color: white;
+  text-align: center;
+  padding: 15px 25px; /* Повече вътрешно отстояние за по-добър изглед */
+  font-size: 18px; /* Малко по-голям шрифт */
+  font-weight: 600; /* Поставяне на по-голяма тежест на текста */
+  border-radius: 10px; /* Заоблени ъгли */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Лека сянка за по-дълбок ефект */
+  z-index: 1000;
+  opacity: 0; /* Скрито в началото */
+  animation: slideDown 3s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    top: -60px; /* Скрито извън екрана */
+    opacity: 0; /* Скрито */
+  }
+  25% {
+    opacity: 1; /* Става видимо */
+  }
+  50% {
+    top: 20px; /* Постепенно спускайте надолу */
+  }
+  75% {
+    top: 20px; /* Остава за малко на място */
+  }
+  100% {
+    top: -60px; /* Изчезва, като се връща нагоре */
+    opacity: 0; /* Скрива се */
+  }
+}
+
+//Custom Button
+.custom-button {
+  font-size: 1rem;
+  font-family: system-ui;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e0bc5d;
+  color: white;
+  font-weight: 500;
+  margin-top: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 7px #be9d34;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #e0bc5d; /* Промяна на цвета при hover */
+}
+
+.custom-button:active {
+  transform: translateY(4px); /* Придвижване на бутона надолу при натискане */
+  box-shadow: 0 2px #e0bc5d; /* Леката промяна на сенката при натискане */
+}
